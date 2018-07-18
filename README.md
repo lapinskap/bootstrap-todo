@@ -20,7 +20,9 @@ I need to implement my own styles alongside bootstrap to make it look like real 
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![main](https://raw.githubusercontent.com/lapinskap/bootstrap-todo/master/img/main.jpg)
+
+![sub](https://raw.githubusercontent.com/lapinskap/bootstrap-todo/master/img/sub.jpg)
 
 ## Technologies
 * Ruby on Rails 5
