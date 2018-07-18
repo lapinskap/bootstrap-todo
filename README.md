@@ -14,7 +14,9 @@
 ## General info
 General purpose was to add Bootstrap to Ruby on Rails project. It was not as easy as it seems! bootstrap-sass gem was problematic.
 
-Simple "todo" application, without any special features, can be used to test new gems
+Simple "todo" application, without any special features, can be used to test new gems.
+
+I need to implement my own styles alongside bootstrap to make it look like real application
 
 
 ## Screenshots
@@ -33,8 +35,25 @@ rails s
 ```
 
 ## Code Examples
-Show examples of usage:
-`put-your-code-here`
+
+POST action in ./app/controllers/todos_controller.rb
+```ruby
+  # POST /todos
+  # POST /todos.json
+  def create
+    @todo = Todo.new(todo_params)
+
+    respond_to do |format|
+      if @todo.save
+        format.html { redirect_to @todo, notice: 'Todo was successfully created.' }
+        format.json { render :show, status: :created, location: @todo }
+      else
+        format.html { render :new }
+        format.json { render json: @todo.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+```
 
 ## Features
 List of features ready and TODOs for future development
@@ -42,7 +61,7 @@ List of features ready and TODOs for future development
 * Awesome jquery link
 
 To-do list:
-* try to use bootstrap-sass gem again
+* try to use bootstrap-sass gem again!
 
 ## Status
 Project is: _in progress_
